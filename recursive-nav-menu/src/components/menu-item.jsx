@@ -20,7 +20,9 @@ export default function MenuItem({item}) {
          {
            item && item.children && item.children.length ? 
            <span onClick={() => handleToggleChildren(item.label)} > 
-             + 
+             {
+                displayCurrentChildren[item.label] ? '-' : '+'
+             }
            </span> : null 
          }
        </div>
